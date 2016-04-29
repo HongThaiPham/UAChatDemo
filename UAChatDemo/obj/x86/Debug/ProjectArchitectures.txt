@@ -1,0 +1,1 @@
+C:\Users\hongt\Documents\Visual Studio 2015\Projects\UAChatDemo\UAChatDemo\UAChatDemo.csproj;x86
