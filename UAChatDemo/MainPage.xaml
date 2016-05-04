@@ -5,16 +5,27 @@
     xmlns:local="using:UAChatDemo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Loaded="Page_Loaded">
+    mc:Ignorable="d" Loaded="Page_Loaded"
+    xmlns:data="using:UAChatDemo.Models">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView x:Name="lvHistory" Grid.Row="0"
-                  HorizontalAlignment="Left" Height="620" Margin="10,10,0,0" VerticalAlignment="Top" Width="340" Loaded="lvHistory_Loaded">
+                  HorizontalAlignment="Left" Height="620" Margin="10,10,0,0" VerticalAlignment="Top" Width="340" ItemsSource="{x:Bind HistoryList}">
             <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding name}" />
+                <DataTemplate x:DataType="data:History">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="{x:Bind UserName}" />
+                        <TextBlock Text="{x:Bind Content}" />
+                    </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <ProgressRing x:Name="myPrgress"
+                      Width="100"
+                      Height="100"
+                      Foreground="Gray"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center" Visibility="Collapsed"/>
     </Grid>
 </Page>

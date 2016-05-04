@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UAChatDemo.Models;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
@@ -25,16 +26,13 @@ namespace UAChatDemo
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private bool incall = false, endoflist = false;
-        private int offset = 0;
-        public static ObservableCollection<string> History = new ObservableCollection<string>();
+
+        public ObservableCollection<History> HistoryList { get; set; }
 
         public MainPage()
         {
             this.InitializeComponent();
-            lvHistory.ItemsSource = History;
-            fetchHstory(0);
-            
+            HistoryList = new ObservableCollection<History>();
 
         }
 
@@ -47,45 +45,16 @@ namespace UAChatDemo
             }
             else
             {
-                var dialog = new MessageDialog(setting.Values["AccessToken"].ToString());
-                await dialog.ShowAsync();
-            }
-        }
+                //var dialog = new MessageDialog(setting.Values["AccessToken"].ToString());
+                //await dialog.ShowAsync();
 
-        public static ScrollViewer GetScrollViewer(DependencyObject depObj)
-        {
-            if (depObj is ScrollViewer) return depObj as ScrollViewer;
-            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
-            {
-                var child = VisualTreeHelper.GetChild(depObj, i);
-                var result = GetScrollViewer(child);
-                if (result != null) return result;
-            }
-            return null;
-        }
+                myPrgress.IsActive = true;
+                myPrgress.Visibility = Visibility.Visible;
 
-        private void lvHistory_Loaded(object sender, RoutedEventArgs e)
-        {
-            ScrollViewer viewer = GetScrollViewer(this.lvHistory);
-            viewer.ViewChanged += Viewer_ViewChanged;
-        }
+                await ChatServices.GetHistory(HistoryList);
 
-        private void Viewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
-        {
-            ScrollViewer view = (ScrollViewer)sender;
-            double progresss = view.VerticalOffset / view.ScrollableHeight;
-            if (progresss > 0.7 && !incall && !endoflist)
-            {
-                incall = true;
-                fetchHstory(++offset);
-            }
-        }
-
-        private void fetchHstory(int v)
-        {
-            int start = v * 20;
-            for (int i = start; i < start + 20; i++)
-            {
+                myPrgress.IsActive = false;
+                myPrgress.Visibility = Visibility.Collapsed;
 
             }
         }
