@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quobject.SocketIoClientDotNet.Client;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -28,13 +29,17 @@ namespace UAChatDemo
     {
 
         public ObservableCollection<History> HistoryList { get; set; }
+        private const string _URL = "https://lhu.edu.vn:5000";
 
         public MainPage()
         {
             this.InitializeComponent();
             HistoryList = new ObservableCollection<History>();
-
+          
         }
+
+
+
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -51,12 +56,23 @@ namespace UAChatDemo
                 myPrgress.IsActive = true;
                 myPrgress.Visibility = Visibility.Visible;
 
-                await ChatServices.GetHistory(HistoryList);
+                IO.Options opts = new IO.Options();
+                //opts.Query.Add("token", setting.Values["AccessToken"].ToString());
+                var socket = IO.Socket(_URL, opts);
+                socket.Connect();
+
+                await ChatServices.GetHistory(HistoryList, "9999-01-01");
 
                 myPrgress.IsActive = false;
                 myPrgress.Visibility = Visibility.Collapsed;
 
             }
+        }
+
+        private void lvHistory_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var item = (History)e.ClickedItem;
+            Frame.Navigate(typeof(Private), 32);
         }
     }
 }

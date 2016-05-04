@@ -45,6 +45,7 @@ namespace UAChatDemo.Models
         /// 
         /// </summary>
         public bool IsOnline { get; set; }
+        public string Avatar { get; set; }
     }
 
     public class DataHis

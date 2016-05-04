@@ -200,3 +200,10 @@ D:\GitHub\UAChatDemo\UAChatDemo\obj\x64\Debug\qualifiers.txt.intermediate
 D:\GitHub\UAChatDemo\UAChatDemo\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\GitHub\UAChatDemo\UAChatDemo\obj\x64\Debug\ProjectArchitectures.txt
 D:\GitHub\UAChatDemo\UAChatDemo\obj\x64\Debug\UAChatDemo.csprojResolveAssemblyReference.cache
+D:\GitHub\UAChatDemo\UAChatDemo\bin\x64\Debug\Private.xbf
+D:\GitHub\UAChatDemo\UAChatDemo\obj\x64\Debug\Private.g.i.cs
+D:\GitHub\UAChatDemo\UAChatDemo\obj\x64\Debug\Private.g.cs
+D:\GitHub\UAChatDemo\UAChatDemo\obj\x64\Debug\Private.xaml
+D:\GitHub\UAChatDemo\UAChatDemo\obj\x64\Debug\Private.xbf
+D:\GitHub\UAChatDemo\UAChatDemo\bin\x64\Debug\EngineIoClientDotNet.dll
+D:\GitHub\UAChatDemo\UAChatDemo\bin\x64\Debug\SocketIoClientDotNet.dll

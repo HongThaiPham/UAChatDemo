@@ -21,6 +21,9 @@
     <AppxPackagedFile Include="D:\GitHub\UAChatDemo\UAChatDemo\bin\x64\Debug\UAChatDemo.exe">
       <PackagePath>entrypoint\UAChatDemo.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\hongt\.nuget\packages\EngineIoClientDotNet\0.9.22\lib\netcore45\EngineIoClientDotNet.dll">
+      <PackagePath>EngineIoClientDotNet.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\hongt\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
     </AppxPackagedFile>
@@ -77,6 +80,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\hongt\.nuget\packages\Newtonsoft.Json\8.0.3\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\hongt\.nuget\packages\SocketIoClientDotNet\0.9.13\lib\netcore45\SocketIoClientDotNet.dll">
+      <PackagePath>SocketIoClientDotNet.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\hongt\.nuget\packages\System.AppContext\4.0.0\lib\netcore50\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

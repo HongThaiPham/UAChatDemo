@@ -132,7 +132,7 @@ namespace UAChatDemo.UAChatDemo_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[11];
+            _typeNameTable = new string[15];
             _typeNameTable[0] = "UAChatDemo.Login";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -144,8 +144,12 @@ namespace UAChatDemo.UAChatDemo_XamlTypeInfo
             _typeNameTable[8] = "String";
             _typeNameTable[9] = "Int32";
             _typeNameTable[10] = "Boolean";
+            _typeNameTable[11] = "UAChatDemo.Private";
+            _typeNameTable[12] = "System.Collections.ObjectModel.ObservableCollection`1<UAChatDemo.Models.Messages>";
+            _typeNameTable[13] = "System.Collections.ObjectModel.Collection`1<UAChatDemo.Models.Messages>";
+            _typeNameTable[14] = "UAChatDemo.Models.Messages";
 
-            _typeTable = new global::System.Type[11];
+            _typeTable = new global::System.Type[15];
             _typeTable[0] = typeof(global::UAChatDemo.Login);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -157,6 +161,10 @@ namespace UAChatDemo.UAChatDemo_XamlTypeInfo
             _typeTable[8] = typeof(global::System.String);
             _typeTable[9] = typeof(global::System.Int32);
             _typeTable[10] = typeof(global::System.Boolean);
+            _typeTable[11] = typeof(global::UAChatDemo.Private);
+            _typeTable[12] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::UAChatDemo.Models.Messages>);
+            _typeTable[13] = typeof(global::System.Collections.ObjectModel.Collection<global::UAChatDemo.Models.Messages>);
+            _typeTable[14] = typeof(global::UAChatDemo.Models.Messages);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -196,6 +204,10 @@ namespace UAChatDemo.UAChatDemo_XamlTypeInfo
         private object Activate_4_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::UAChatDemo.Models.History>(); }
         private object Activate_5_Collection() { return new global::System.Collections.ObjectModel.Collection<global::UAChatDemo.Models.History>(); }
         private object Activate_7_History() { return new global::UAChatDemo.Models.History(); }
+        private object Activate_11_Private() { return new global::UAChatDemo.Private(); }
+        private object Activate_12_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::UAChatDemo.Models.Messages>(); }
+        private object Activate_13_Collection() { return new global::System.Collections.ObjectModel.Collection<global::UAChatDemo.Models.Messages>(); }
+        private object Activate_14_Messages() { return new global::UAChatDemo.Models.Messages(); }
         private void VectorAdd_4_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::UAChatDemo.Models.History>)instance;
@@ -206,6 +218,18 @@ namespace UAChatDemo.UAChatDemo_XamlTypeInfo
         {
             var collection = (global::System.Collections.Generic.ICollection<global::UAChatDemo.Models.History>)instance;
             var newItem = (global::UAChatDemo.Models.History)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_12_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::UAChatDemo.Models.Messages>)instance;
+            var newItem = (global::UAChatDemo.Models.Messages)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_13_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::UAChatDemo.Models.Messages>)instance;
+            var newItem = (global::UAChatDemo.Models.Messages)item;
             collection.Add(newItem);
         }
 
@@ -272,6 +296,7 @@ namespace UAChatDemo.UAChatDemo_XamlTypeInfo
                 userType.AddMemberName("Readed");
                 userType.AddMemberName("IsMe");
                 userType.AddMemberName("IsOnline");
+                userType.AddMemberName("Avatar");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -286,6 +311,37 @@ namespace UAChatDemo.UAChatDemo_XamlTypeInfo
 
             case 10:   //  Boolean
                 xamlType = new global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 11:   //  UAChatDemo.Private
+                userType = new global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_Private;
+                userType.AddMemberName("Id");
+                userType.AddMemberName("MessagesList");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 12:   //  System.Collections.ObjectModel.ObservableCollection`1<UAChatDemo.Models.Messages>
+                userType = new global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<UAChatDemo.Models.Messages>"));
+                userType.CollectionAdd = VectorAdd_12_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 13:   //  System.Collections.ObjectModel.Collection`1<UAChatDemo.Models.Messages>
+                userType = new global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_13_Collection;
+                userType.CollectionAdd = VectorAdd_13_Collection;
+                xamlType = userType;
+                break;
+
+            case 14:   //  UAChatDemo.Models.Messages
+                userType = new global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_14_Messages;
+                userType.AddMemberName("MyProperty");
+                userType.SetIsLocalType();
+                xamlType = userType;
                 break;
             }
             return xamlType;
@@ -392,6 +448,46 @@ namespace UAChatDemo.UAChatDemo_XamlTypeInfo
             var that = (global::UAChatDemo.Models.History)instance;
             that.IsOnline = (global::System.Boolean)Value;
         }
+        private object get_10_History_Avatar(object instance)
+        {
+            var that = (global::UAChatDemo.Models.History)instance;
+            return that.Avatar;
+        }
+        private void set_10_History_Avatar(object instance, object Value)
+        {
+            var that = (global::UAChatDemo.Models.History)instance;
+            that.Avatar = (global::System.String)Value;
+        }
+        private object get_11_Private_Id(object instance)
+        {
+            var that = (global::UAChatDemo.Private)instance;
+            return that.Id;
+        }
+        private void set_11_Private_Id(object instance, object Value)
+        {
+            var that = (global::UAChatDemo.Private)instance;
+            that.Id = (global::System.Int32)Value;
+        }
+        private object get_12_Private_MessagesList(object instance)
+        {
+            var that = (global::UAChatDemo.Private)instance;
+            return that.MessagesList;
+        }
+        private void set_12_Private_MessagesList(object instance, object Value)
+        {
+            var that = (global::UAChatDemo.Private)instance;
+            that.MessagesList = (global::System.Collections.ObjectModel.ObservableCollection<global::UAChatDemo.Models.Messages>)Value;
+        }
+        private object get_13_Messages_MyProperty(object instance)
+        {
+            var that = (global::UAChatDemo.Models.Messages)instance;
+            return that.MyProperty;
+        }
+        private void set_13_Messages_MyProperty(object instance, object Value)
+        {
+            var that = (global::UAChatDemo.Models.Messages)instance;
+            that.MyProperty = (global::System.Int32)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -459,6 +555,30 @@ namespace UAChatDemo.UAChatDemo_XamlTypeInfo
                 xamlMember = new global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlMember(this, "IsOnline", "Boolean");
                 xamlMember.Getter = get_9_History_IsOnline;
                 xamlMember.Setter = set_9_History_IsOnline;
+                break;
+            case "UAChatDemo.Models.History.Avatar":
+                userType = (global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UAChatDemo.Models.History");
+                xamlMember = new global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlMember(this, "Avatar", "String");
+                xamlMember.Getter = get_10_History_Avatar;
+                xamlMember.Setter = set_10_History_Avatar;
+                break;
+            case "UAChatDemo.Private.Id":
+                userType = (global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UAChatDemo.Private");
+                xamlMember = new global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlMember(this, "Id", "Int32");
+                xamlMember.Getter = get_11_Private_Id;
+                xamlMember.Setter = set_11_Private_Id;
+                break;
+            case "UAChatDemo.Private.MessagesList":
+                userType = (global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UAChatDemo.Private");
+                xamlMember = new global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlMember(this, "MessagesList", "System.Collections.ObjectModel.ObservableCollection`1<UAChatDemo.Models.Messages>");
+                xamlMember.Getter = get_12_Private_MessagesList;
+                xamlMember.Setter = set_12_Private_MessagesList;
+                break;
+            case "UAChatDemo.Models.Messages.MyProperty":
+                userType = (global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UAChatDemo.Models.Messages");
+                xamlMember = new global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlMember(this, "MyProperty", "Int32");
+                xamlMember.Getter = get_13_Messages_MyProperty;
+                xamlMember.Setter = set_13_Messages_MyProperty;
                 break;
             }
             return xamlMember;

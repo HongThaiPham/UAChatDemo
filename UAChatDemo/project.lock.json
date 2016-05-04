@@ -3,6 +3,18 @@
   "version": 2,
   "targets": {
     "UAP,Version=v10.0": {
+      "EngineIoClientDotNet/0.9.22": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "type": "package",
         "compile": {
@@ -309,6 +321,19 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SocketIoClientDotNet/0.9.13": {
+        "type": "package",
+        "dependencies": {
+          "EngineIoClientDotNet": "0.9.22",
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -1930,6 +1955,18 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
+      "EngineIoClientDotNet/0.9.22": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "type": "package",
         "compile": {
@@ -2229,6 +2266,19 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SocketIoClientDotNet/0.9.13": {
+        "type": "package",
+        "dependencies": {
+          "EngineIoClientDotNet": "0.9.22",
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -3714,6 +3764,18 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
+      "EngineIoClientDotNet/0.9.22": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "type": "package",
         "compile": {
@@ -3999,6 +4061,19 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SocketIoClientDotNet/0.9.13": {
+        "type": "package",
+        "dependencies": {
+          "EngineIoClientDotNet": "0.9.22",
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -5461,6 +5536,18 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
+      "EngineIoClientDotNet/0.9.22": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "type": "package",
         "compile": {
@@ -5767,6 +5854,19 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SocketIoClientDotNet/0.9.13": {
+        "type": "package",
+        "dependencies": {
+          "EngineIoClientDotNet": "0.9.22",
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -7252,6 +7352,18 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
+      "EngineIoClientDotNet/0.9.22": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "type": "package",
         "compile": {
@@ -7537,6 +7649,19 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SocketIoClientDotNet/0.9.13": {
+        "type": "package",
+        "dependencies": {
+          "EngineIoClientDotNet": "0.9.22",
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -8999,6 +9124,18 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
+      "EngineIoClientDotNet/0.9.22": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "type": "package",
         "compile": {
@@ -9305,6 +9442,19 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SocketIoClientDotNet/0.9.13": {
+        "type": "package",
+        "dependencies": {
+          "EngineIoClientDotNet": "0.9.22",
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -10790,6 +10940,18 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
+      "EngineIoClientDotNet/0.9.22": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/EngineIoClientDotNet.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "type": "package",
         "compile": {
@@ -11075,6 +11237,19 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SocketIoClientDotNet/0.9.13": {
+        "type": "package",
+        "dependencies": {
+          "EngineIoClientDotNet": "0.9.22",
+          "Newtonsoft.Json": "8.0.1"
+        },
+        "compile": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/SocketIoClientDotNet.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -12538,6 +12713,24 @@
     }
   },
   "libraries": {
+    "EngineIoClientDotNet/0.9.22": {
+      "sha512": "/dMIbPizLAzde4hr8uvHSCshKqq2zEH1lYQa83eHXRMiBGltyUKikvIdZCunDiwPL1EPxa5ngHwqd5NBQyn7eA==",
+      "type": "package",
+      "files": [
+        "EngineIoClientDotNet.0.9.22.nupkg.sha512",
+        "EngineIoClientDotNet.nuspec",
+        "lib/monoandroid10/EngineIoClientDotNet.dll",
+        "lib/monotouch10/EngineIoClientDotNet.dll",
+        "lib/net35/EngineIoClientDotNet.dll",
+        "lib/net40/EngineIoClientDotNet.dll",
+        "lib/net45/EngineIoClientDotNet.dll",
+        "lib/netcore45/EngineIoClientDotNet.dll",
+        "lib/portable-win81+wpa81/EngineIoClientDotNet.dll",
+        "lib/portable-wpa81+wp81/EngineIoClientDotNet.dll",
+        "lib/windowsphone8/EngineIoClientDotNet.dll",
+        "lib/xamarinios10/EngineIoClientDotNet.dll"
+      ]
+    },
     "Microsoft.ApplicationInsights/1.0.0": {
       "sha512": "HZ47/thX57SOuIivSvIbsR6L9CCb/Yt3IyB2i4KHmmNlf3DO+lqFwWIKDdbDNWKX+qh0Rg20/JSMPK0dwUsYYw==",
       "type": "package",
@@ -13222,6 +13415,24 @@
         "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
         "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
         "tools/install.ps1"
+      ]
+    },
+    "SocketIoClientDotNet/0.9.13": {
+      "sha512": "0U1gOjIYNLLeEabCinglXOeY7QyVPMmvE6DRtHgwhq2H8zglPUXIpbbG74FmRVZhDA8ryATpArTeHcT/CP6xXA==",
+      "type": "package",
+      "files": [
+        "SocketIoClientDotNet.0.9.13.nupkg.sha512",
+        "SocketIoClientDotNet.nuspec",
+        "lib/monoandroid10/SocketIoClientDotNet.dll",
+        "lib/monotouch10/SocketIoClientDotNet.dll",
+        "lib/net35/SocketIoClientDotNet.dll",
+        "lib/net40/SocketIoClientDotNet.dll",
+        "lib/net45/SocketIoClientDotNet.dll",
+        "lib/netcore45/SocketIoClientDotNet.dll",
+        "lib/portable-win81+wpa81/SocketIoClientDotNet.dll",
+        "lib/portable-wpa81+wp81/SocketIoClientDotNet.dll",
+        "lib/windowsphone8/SocketIoClientDotNet.dll",
+        "lib/xamarinios10/SocketIoClientDotNet.dll"
       ]
     },
     "System.AppContext/4.0.0": {
@@ -15746,7 +15957,8 @@
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
-      "Newtonsoft.Json >= 8.0.3"
+      "Newtonsoft.Json >= 8.0.3",
+      "SocketIoClientDotNet >= 0.9.13"
     ],
     "UAP,Version=v10.0": []
   }

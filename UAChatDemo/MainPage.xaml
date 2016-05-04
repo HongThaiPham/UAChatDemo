@@ -10,12 +10,22 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView x:Name="lvHistory" Grid.Row="0"
-                  HorizontalAlignment="Left" Height="620" Margin="10,10,0,0" VerticalAlignment="Top" Width="340" ItemsSource="{x:Bind HistoryList}">
+                  HorizontalAlignment="Left" Height="620" Margin="10,10,0,0" VerticalAlignment="Top" Width="340" ItemsSource="{x:Bind HistoryList}"
+                  IsItemClickEnabled="True" ItemClick="lvHistory_ItemClick">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="data:History">
-                    <StackPanel HorizontalAlignment="Center">
-                        <TextBlock Text="{x:Bind UserName}" />
-                        <TextBlock Text="{x:Bind Content}" />
+                    <StackPanel HorizontalAlignment="Center"
+                                Orientation="Horizontal" Margin="0,5">
+                        <Ellipse Width="75" Height="75">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="{x:Bind Avatar}"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5,0">
+                            <TextBlock Text="{x:Bind UserName}" />
+                            <TextBlock Text="{x:Bind Content}" />
+                        </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

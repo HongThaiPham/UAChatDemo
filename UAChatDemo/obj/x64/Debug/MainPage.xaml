@@ -10,12 +10,22 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView x:ConnectionId='2' x:Name="lvHistory" Grid.Row="0"
-                  HorizontalAlignment="Left" Height="620" Margin="10,10,0,0" VerticalAlignment="Top" Width="340"                                   >
+                  HorizontalAlignment="Left" Height="620" Margin="10,10,0,0" VerticalAlignment="Top" Width="340"                                   
+                  IsItemClickEnabled="True"                                >
             <ListView.ItemTemplate>
                 <DataTemplate                          >
-                    <StackPanel x:ConnectionId='4' HorizontalAlignment="Center">
-                        <TextBlock x:ConnectionId='5'                          />
-                        <TextBlock x:ConnectionId='6'                         />
+                    <StackPanel x:ConnectionId='4' HorizontalAlignment="Center"
+                                Orientation="Horizontal" Margin="0,5">
+                        <Ellipse Width="75" Height="75">
+                            <Ellipse.Fill>
+                                <ImageBrush x:ConnectionId='7'                              />
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5,0">
+                            <TextBlock x:ConnectionId='5'                          />
+                            <TextBlock x:ConnectionId='6'                         />
+                        </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
