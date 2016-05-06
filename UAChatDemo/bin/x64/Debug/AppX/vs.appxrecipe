@@ -22,13 +22,13 @@
     <AppXManifest Include="D:\GitHub\UAChatDemo\UAChatDemo\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-05-04T08:46:14.370</Modified>
+      <Modified>2016-05-06T03:54:42.947</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\GitHub\UAChatDemo\UAChatDemo\bin\x64\Debug\UAChatDemo.exe">
       <PackagePath>entrypoint\UAChatDemo.exe</PackagePath>
-      <Modified>2016-05-04T08:46:14.058</Modified>
+      <Modified>2016-05-06T03:54:42.459</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\hongt\.nuget\packages\EngineIoClientDotNet\0.9.22\lib\netcore45\EngineIoClientDotNet.dll">
       <PackagePath>EngineIoClientDotNet.dll</PackagePath>
@@ -530,7 +530,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\UAChatDemo\UAChatDemo\bin\x64\Debug\Core\UAChatDemo.exe">
       <PackagePath>UAChatDemo.exe</PackagePath>
-      <Modified>2016-05-04T08:46:14.368</Modified>
+      <Modified>2016-05-06T03:54:42.944</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -316,7 +316,7 @@ namespace UAChatDemo.UAChatDemo_XamlTypeInfo
             case 11:   //  UAChatDemo.Private
                 userType = new global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_11_Private;
-                userType.AddMemberName("Id");
+                userType.AddMemberName("item");
                 userType.AddMemberName("MessagesList");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -458,15 +458,15 @@ namespace UAChatDemo.UAChatDemo_XamlTypeInfo
             var that = (global::UAChatDemo.Models.History)instance;
             that.Avatar = (global::System.String)Value;
         }
-        private object get_11_Private_Id(object instance)
+        private object get_11_Private_item(object instance)
         {
             var that = (global::UAChatDemo.Private)instance;
-            return that.Id;
+            return that.item;
         }
-        private void set_11_Private_Id(object instance, object Value)
+        private void set_11_Private_item(object instance, object Value)
         {
             var that = (global::UAChatDemo.Private)instance;
-            that.Id = (global::System.Int32)Value;
+            that.item = (global::UAChatDemo.Models.History)Value;
         }
         private object get_12_Private_MessagesList(object instance)
         {
@@ -562,11 +562,11 @@ namespace UAChatDemo.UAChatDemo_XamlTypeInfo
                 xamlMember.Getter = get_10_History_Avatar;
                 xamlMember.Setter = set_10_History_Avatar;
                 break;
-            case "UAChatDemo.Private.Id":
+            case "UAChatDemo.Private.item":
                 userType = (global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UAChatDemo.Private");
-                xamlMember = new global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlMember(this, "Id", "Int32");
-                xamlMember.Getter = get_11_Private_Id;
-                xamlMember.Setter = set_11_Private_Id;
+                xamlMember = new global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlMember(this, "item", "UAChatDemo.Models.History");
+                xamlMember.Getter = get_11_Private_item;
+                xamlMember.Setter = set_11_Private_item;
                 break;
             case "UAChatDemo.Private.MessagesList":
                 userType = (global::UAChatDemo.UAChatDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UAChatDemo.Private");
